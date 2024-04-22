@@ -1,0 +1,417 @@
+/*------------------------------------------*\
+  #ROOT
+\*------------------------------------------*/
+
+:root {
+  /**
+     * Colors
+     */
+
+  /* Primary */
+  --Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  /* (active input border) */
+  --Red: hsl(0, 100%, 66%);
+  /* (input errors) */
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+
+  /**
+     * Typography
+     */
+
+  /* Body Copy */
+  --Font-size: 18px;
+
+  /* Font Family */
+  --font-family: "Space Grotesk", sans-serif;
+}
+
+/*------------------------------------------*\
+  #RESET
+\*------------------------------------------*/
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+input,
+button {
+  display: block;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+input { outline: none; }
+
+button { cursor: pointer; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--Font-size);
+  font-weight: bold;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--White);
+  color: var(--Very-dark-violet);
+}
+
+::selection {
+  background: hsl(278, 94%, 30%);
+  color: var(--White);
+}
+
+::-webkit-scrollbar {
+  background-color: var(--White);
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, hsl(249, 99%, 64%) 0%, hsl(278, 94%, 30%) 50%);
+  border-radius: 4px;
+}
+
+/*------------------------------------------*\
+  #DUBLICATE ITEM
+\*------------------------------------------*/
+
+.section {
+  padding-block: 30px;
+}
+
+.container {
+  padding-inline: 16px;
+}
+
+.img-cover-mobile {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.img-cover-desktop {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*------------------------------------------*\
+  #COMPONENT
+\*------------------------------------------*/
+
+/**
+ * BTN
+ */
+.btn {
+  background-color: var(--Very-dark-violet);
+  border-radius: 10px;
+  color: var(--White);
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  height: 60px;
+}
+
+/*------------------------------------------*\
+  #BACKGROUND IMAGE
+\*------------------------------------------*/
+
+.mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  display: none;
+}
+
+/*------------------------------------------*\
+  #HERO
+\*------------------------------------------*/
+
+.hero .container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  height: auto;
+  width: 100%;
+  gap: 45px;
+}
+
+.hero .container .hero-card .card-one {
+  position: absolute;
+  width: 300px;
+  left: 10px;
+  top: 123px;
+  z-index: 2;
+}
+
+.hero .container .hero-card .card-one .card-front {
+  position: absolute;
+  width: 300px; 
+}
+
+.hero .container .hero-card .card-one .card-one-all {
+  position: absolute;
+  padding: 20px;
+  width: 300px; 
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-logo {
+  width: 63px;
+  height: auto;
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-one-content {
+  margin-top: 31px;
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-one-content .card-number {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--White);
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-one-content .card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--White);
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-one-content .card-bottom .card-item p { 
+  color: var(--Light-grayish-violet);
+  font-weight: 500;
+  font-size: 15px; 
+}
+
+.hero .container .hero-card .card-one .card-one-all .card-one-content .card-bottom .card-item .date { letter-spacing: 1.5px; }
+
+.hero .container .hero-card .card-two {
+  position: absolute;
+  width: 300px;
+  right: 10px;
+  z-index: 1;
+}
+
+.hero .container .hero-card .card-two .card-back {
+  position: absolute;
+  width: 300px;
+}
+
+.hero .container .hero-card .card-two .cvc {
+  color: var(--White);
+  letter-spacing: 1.5px;
+  position: absolute;
+  font-size: 14px;
+  right: 39px;
+  top: 72px;
+}
+
+
+.hero .container .hero-form { margin-top: 270px; }
+
+.hero .container .hero-form .hero-form-one {
+  display: grid;
+  gap: 22px;
+}
+
+.hero .container .hero-form .hero-form-one.active { display: none; }
+
+.hero .container .hero-form .hero-form-one .input-box h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.hero .container .hero-form .hero-form-one .input-box .item {
+  border: 2px solid var(--Light-grayish-violet);
+  border-radius: 10px;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: .4s;
+}
+
+.hero .container .hero-form .hero-form-one .input-box .item.active {
+  border: 2px solid var(--Red);
+  transition: .4s;
+}
+
+.hero .container .hero-form .hero-form-one .input-box .item::placeholder { color: var(--Light-grayish-violet); }
+
+.hero .container .hero-form .hero-form-one .input-box .item:focus {
+  border-right: 2px solid hsl(278, 94%, 30%);
+  border-bottom: 2px solid hsl(278, 94%, 30%);
+  border-left: 2px solid hsl(249, 99%, 64%);
+  border-top: 2px solid hsl(249, 99%, 64%);
+  transition: .4s;
+}
+
+.hero .container .hero-form .hero-form-one .input-box .error {
+  color: var(--Red);
+  font-size: 14px;
+  margin-top: 8px;
+  display: none;
+}
+
+.hero .container .hero-form .hero-form-one .input-box .error.active { display: block; }
+
+.hero .container .hero-form .hero-form-one .inputs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero .container .hero-form .hero-form-one .inputs .input-box .input-Double .input-only {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero .container .hero-form .hero-form-one .inputs .input-box .input-Number { width: 180px; }
+
+.hero .container .hero-form .hero-Completed-state-start {
+  text-align: center;
+  display: grid;
+  display: none;
+  gap: 30px;
+}
+
+.hero .container .hero-form .hero-Completed-state-start.active { display: grid; }
+
+.hero .container .hero-form .hero-Completed-state-start img { margin: 0 auto; }
+
+.hero .container .hero-form .hero-Completed-state-start .hero-Completed-state-start-content {
+  display: grid;
+  gap: 15px;
+}
+
+.hero .container .hero-form .hero-Completed-state-start .hero-Completed-state-start-content h1 { 
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 2rem; 
+}
+
+.hero .container .hero-form .hero-Completed-state-start .hero-Completed-state-start-content p {
+  color: var(--Dark-grayish-violet);
+  font-size: 1.1rem;
+}
+
+/*------------------------------------------*\
+  #MEDIA
+\*------------------------------------------*/
+
+@media (min-width: 1200px) {
+  /* #DUBLICATE ITEM */
+  .section { padding-block: 0px; }
+  
+  .container { padding-inline: 10%; }
+
+  /* #BACKGROUND IMAGE */
+  .mobile { display: none; }
+  
+  .desktop { display: block; }
+
+  /* #HERO */
+  .hero .container {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    height: 100vh;
+    gap: 150px;
+  }
+  
+  .hero .container .hero-card .card-one {
+    position: absolute;
+    width: 450px;
+    left: 145px;
+    top: 150px;
+  }
+  
+  .hero .container .hero-card .card-one .card-front { width: 450px; }
+  
+  .hero .container .hero-card .card-one .card-one-all {
+    padding: 30px;
+    width: 450px; 
+  }
+  
+  .hero .container .hero-card .card-one .card-one-all .card-logo { width: auto; }
+  
+  .hero .container .hero-card .card-one .card-one-all .card-one-content { margin-top: 60px; }
+  
+  .hero .container .hero-card .card-one .card-one-all .card-one-content .card-number {
+    text-align: center;
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  
+  .hero .container .hero-card .card-one .card-one-all .card-one-content .card-bottom .card-item p { font-size: 16px; }
+  
+  .hero .container .hero-card .card-two {
+    position: relative;
+    width: 450px;
+  }
+  
+  .hero .container .hero-card .card-two .card-back {
+    position: absolute;
+    right: -70px;
+    width: 450px;
+  }
+  
+  .hero .container .hero-card .card-two .cvc {
+    font-size: 20px;
+    right: -15px;
+    top: 108px;
+  }
+  
+  
+  .hero .container .hero-form { 
+    margin-top: 0px; 
+    width: 450px;
+  }
+  
+  .hero .container .hero-form .hero-form-one .input-box h3 { font-size: 16px; }
+  
+  .hero .container .hero-form .hero-form-one .input-box .error { font-size: 15px; }
+  
+  .hero .container .hero-form .hero-form-one .inputs .input-box .input-Double .input-only { gap: 15px; }
+  
+  .hero .container .hero-form .hero-Completed-state-start .hero-Completed-state-start-content h1 { font-size: 2.2rem; }
+}

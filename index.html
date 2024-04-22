@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- logo website frontend mentor -->
+    <link rel="icon" href="./assets/images/favicon-32x32.png">
+    <!-- meta tags -->
+    <meta name="title" content="Interactive card details form">
+    <meta name="description" content="this is Interactive card details form">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!-- custom ccs link -->
+    <link rel="stylesheet" href="./assets/css/script.css">
+    <title>Interactive card details form</title>
+  </head>
+  <body>
+    <!-- #BACKGROUND IMAGE -->
+    <img src="./assets/images/bg-main-mobile.png" alt="bg-main-mobile" class="mobile img-cover-mobile">
+    <img src="./assets/images/bg-main-desktop.png" alt="bg-main-desktop" class="desktop img-cover-desktop">
+
+    <!-- #HERO -->
+    <main class="hero section">
+      <div class="container">
+        <div class="hero-card">
+          <div class="card-one">
+            <img src="./assets/images/bg-card-front.png" alt="bg-card-front" class="card-front">
+            <div class="card-one-all">
+              <figure>
+                <img src="./assets/images/card-logo.svg" alt="card-logo" class="card-logo">
+              </figure>
+              
+              <div class="card-one-content">
+                <h1 class="card-number" data-card-number>0000 0000 0000 0000</h1>
+                <ul class="card-bottom">
+                  <li class="card-item">
+                    <p class="name" data-name>Jane Appleseed</p>
+                  </li>
+  
+                  <li class="card-item">
+                    <p class="date"><span data-mm>00</span>/<span data-yy>00</span></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-two">
+            <img src="./assets/images/bg-card-back.png" alt="bg-card-back" class="card-back">
+            <p class="cvc" data-cvc>000</p>
+          </div>
+        </div>
+
+        <div class="hero-form">
+          <div class="hero-form-one" data-form-one>
+            <div class="input-box">
+              <h3>Cardholder Name</h3>
+              <input maxlength="30" type="text" placeholder="e.g. Jane Appleseed" class="item" data-input-name>
+              <span class="error" data-error-name>The name cannot be empty</span>
+            </div>
+
+            <div class="input-box">
+              <h3>Card Number</h3>
+              <input type="text" minlength="19" maxlength="19" placeholder="e.g. 1234 5678 9123 0000" class="item" data-input-Number>
+              <span class="error" data-error-nuber>Don't forget to put spaces after every four numbers</span>
+            </div>
+
+            <ul class="inputs">
+              <li class="input-box">
+                <h3>Exp. Date (MM/YY)</h3>
+                <div class="input-Double">
+                  <div class="input-only">
+                    <input type="text" minlength="2" maxlength="2" placeholder="MM" class="MM item" data-input-MM>
+                    <input type="text" minlength="2" maxlength="2" placeholder="YY" class="YY item" data-input-YY>
+                  </div>
+                  <span class="error" data-error-MM-YY>can't be blank</span>
+                </div>
+              </li>
+
+              <div class="input-box">
+                <h3>CVC</h3>
+                <input type="text" maxlength="3" placeholder="e.g. 123" class="item input-Number" data-input-cvc>
+                <span class="error" data-error-cvc>can't be blank</span>
+              </div>
+            </ul>
+
+            <button class="btn" data-btn-1>
+              <span>Confirm</span>
+            </button>
+          </div>
+
+          <div class="hero-Completed-state-start" data-Completed-state-start>
+            <img src="./assets/images/icon-complete.svg" alt="icon-complete">
+            <div class="hero-Completed-state-start-content">
+              <h1>Thank you!</h1>
+              <p>We've added your card details</p>
+            </div>
+            <button class="btn" data-btn-2>
+              <span>Continue</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <!-- custom js link -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
